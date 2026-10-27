@@ -24,3 +24,11 @@ Route::post('/admin/generate', function (Request $request) {
 
     return back()->withInput()->with('generatedLink', $fakeLink);
 })->name('admin.generate');
+
+Route::post('/api/send-wa', [InvitationController::class, 'sendWhatsappApi'])->name('api.send.wa');
+
+/ 2. Saat form di-submit, jalankan fungsi store untuk menyimpan ke database
+Route::post('/admin/generate', [InvitationController::class, 'store'])->name('admin.generate');
+
+// 3. Rute Tampilan Undangan Klien (WAJIB diletakkan di baris paling bawah)
+Route::get('/{slug}', [InvitationController::class, 'show'])->name('undangan.show');
