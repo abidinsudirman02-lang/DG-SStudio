@@ -3,20 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-// Route::get('/', function () {
-//     // Daftarkan nama folder desain secara manual karena keterbatasan serverless Vercel
-//     $templates = [
-//         'elegan-gold',
-//         // Tambahkan 'nama-folder-lain' di sini jika ada desain baru
-//     ];
-
-//     return view('admin.dashboard', compact('templates'));
-// });
-
+// Rute Halaman Utama (Panel Admin)
 Route::get('/', function () {
-    return 'Server Vercel dan Laravel Berhasil Berjalan!';
+    // Daftarkan nama folder desain secara manual
+    $templates = [
+        'elegan-gold',
+        // Tambahkan nama folder desain baru di sini nantinya, contoh: 'rustic-floral'
+    ];
+
+    return view('admin.dashboard', compact('templates'));
 });
 
+// Rute Pemrosesan Form Link Undangan
 Route::post('/admin/generate', function (Request $request) {
     $template = $request->input('template');
     $groom = urlencode($request->input('groom'));
