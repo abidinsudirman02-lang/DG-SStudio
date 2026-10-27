@@ -1,5 +1,8 @@
 <?php
-// Tambahkan 2 baris ini sementara untuk melacak eror 500 Vercel
+// Tulis kode ini tepat di bawah tag PHP pembuka
+echo "Serverless PHP Vercel Berhasil!";
+die(); 
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
