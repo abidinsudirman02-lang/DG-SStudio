@@ -20,7 +20,7 @@ Route::post('/admin/generate', function (Request $request) {
     $groom = urlencode($request->input('groom'));
     $bride = urlencode($request->input('bride'));
     
-    $fakeLink = url('/undangan/' . $template . '/' . $groom . '/' . $bride);
+    $fakeLink = url('/undangan/' . $template . '/' . $groom . '&' . $bride);
 
     return back()->withInput()->with('generatedLink', $fakeLink);
 })->name('admin.generate');
