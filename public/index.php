@@ -1,4 +1,7 @@
 <?php
+// Tambahkan 2 baris ini sementara untuk melacak eror 500 Vercel
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
