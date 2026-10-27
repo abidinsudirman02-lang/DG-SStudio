@@ -1,8 +1,5 @@
 <?php
 // Tulis kode ini tepat di bawah tag PHP pembuka
-echo "Serverless PHP Vercel Berhasil!";
-die(); 
-
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
